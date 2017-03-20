@@ -1,0 +1,7 @@
+#Thu Mar 16 15:30:29 CET 2017
+base.0=D\:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_b0cbb4ac4b78012c2a5ef9f4a8f0d7bfffe7fa2f
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=D\:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_77d785bc0c3d7582b89cc5f2e06a88f6698e7a14\\classes.dex
+base.1=D\:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_77d785bc0c3d7582b89cc5f2e06a88f6698e7a14
+file.0=D\:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_b0cbb4ac4b78012c2a5ef9f4a8f0d7bfffe7fa2f\\classes.dex

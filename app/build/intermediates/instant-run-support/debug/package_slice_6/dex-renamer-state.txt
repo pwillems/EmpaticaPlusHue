@@ -1,0 +1,4 @@
+#Thu Mar 16 14:33:45 CET 2017
+base.0=D\:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_6
+renamed.0=classes.dex
+file.0=D\:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_6\\classes.dex

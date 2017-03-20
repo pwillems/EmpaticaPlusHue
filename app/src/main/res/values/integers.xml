@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="bri_min">1</integer>
+    <integer name="bri_max">254</integer>
+    <integer name="sat_min">0</integer>
+    <integer name="sat_max">254</integer>
+    <integer name="hue_min">0</integer>
+    <integer name="hue_max">65535</integer>
+</resources>

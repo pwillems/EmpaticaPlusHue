@@ -1,0 +1,7 @@
+#Thu Mar 16 14:33:45 CET 2017
+base.0=D\:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\huelocalsdk_1417aaa5f41e94022fc596c8b57c5196d4452e91
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=D\:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\huesdkresources_247382439150fc2805ca8fbb32bc4fa2c7ffb75f\\classes.dex
+base.1=D\:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\huesdkresources_247382439150fc2805ca8fbb32bc4fa2c7ffb75f
+file.0=D\:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\huelocalsdk_1417aaa5f41e94022fc596c8b57c5196d4452e91\\classes.dex

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\menu\\home.xml",
+        "source": "D:\\Android\\EmpaticaPlusHue\\app\\src\\main\\res\\menu\\home.xml"
+    },
+    {
+        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\menu\\bridgelist.xml",
+        "source": "D:\\Android\\EmpaticaPlusHue\\app\\src\\main\\res\\menu\\bridgelist.xml"
+    }
+]
