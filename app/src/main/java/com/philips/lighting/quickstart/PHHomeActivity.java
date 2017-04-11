@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
+import com.philips.lighting.R;
 import com.philips.lighting.data.AccessPointListAdapter;
 import com.philips.lighting.data.HueSharedPreferences;
 import com.philips.lighting.hue.sdk.PHAccessPoint;
@@ -46,9 +47,12 @@ public class PHHomeActivity extends Activity implements OnItemClickListener {
     private AccessPointListAdapter adapter;
     
     private boolean lastSearchWasIPScan = false;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bridgelistlinear);
         

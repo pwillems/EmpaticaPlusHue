@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+    }
+]

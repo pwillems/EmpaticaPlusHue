@@ -3,6 +3,15 @@
 
     <item
         is-multidex="true"
+        jar="D:\Android\EmpaticaPlusHue\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f9cd9765f6f89dcbc7e0b012c17bd3eebaead15c">
+        <dex dex="D:\Android\EmpaticaPlusHue\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_77d785bc0c3d7582b89cc5f2e06a88f6698e7a14\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="D:\Android\EmpaticaPlusHue\app\libs\huelocalsdk.jar"
         jumboMode="true"
         optimize="true"
@@ -30,12 +39,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="D:\Android\EmpaticaPlusHue\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="44d8fb559f8d080ed65ecde198b9764977a48ae1">
-        <dex dex="D:\Android\EmpaticaPlusHue\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_77d785bc0c3d7582b89cc5f2e06a88f6698e7a14\classes.dex" />
+        sha1="3dd9790a64f5bd6e724c286c8b1063b7762bc4e3">
+        <dex dex="D:\Android\EmpaticaPlusHue\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_683374a506835f3f115b9e4fc5ed2ee7320e4631\classes.dex" />
     </item>
 
 </items>

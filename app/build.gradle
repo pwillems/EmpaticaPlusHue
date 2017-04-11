@@ -1,13 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 18
+    compileSdkVersion 25
     buildToolsVersion "25.0.2"
 
     defaultConfig {
         applicationId "com.philips.lighting.quickstart"
-        minSdkVersion 8
-        targetSdkVersion 17
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
     }
 
     buildTypes {
@@ -18,7 +20,25 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 dependencies {
+    fileTree(dir: 'libs', include: '**/*.aar')
+            .each { File file ->
+        dependencies.add("compile", [
+                name: file.name.lastIndexOf('.').with { it != -1 ? file.name[0..<it] : file.name },
+                ext: 'aar'
+        ])
+    }
     compile files('libs/huelocalsdk.jar')
     compile files('libs/huesdkresources.jar')
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.empatica.empalink:empalink:2.1@aar'
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
 }
+
+

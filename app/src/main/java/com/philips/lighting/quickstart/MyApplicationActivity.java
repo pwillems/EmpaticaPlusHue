@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Random;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
 
+import com.philips.lighting.R;
 import com.philips.lighting.hue.listener.PHLightListener;
 import com.philips.lighting.hue.sdk.PHHueSDK;
 import com.philips.lighting.model.PHBridge;
@@ -31,13 +33,22 @@ import com.philips.lighting.model.PHLightState;
  */
 public class MyApplicationActivity extends Activity {
     private PHHueSDK phHueSDK;
-    private static final int MAX_HUE=65535;
+    private static final int MAX_HUE= 65535;
     public static final String TAG = "QuickStart";
 
     private SeekBar seekHue;
     private SeekBar seekSat;
     private SeekBar seekBri;
     private int random;
+
+    public boolean tense = false;
+    public boolean irritated = false;
+    public boolean cheerful = false;
+    public boolean exited = false;
+    public boolean bored = false;
+    public boolean gloomy = false;
+    public boolean calm = false;
+    public boolean relaxed = false;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -157,6 +168,15 @@ public class MyApplicationActivity extends Activity {
                 lightsChange();
             }
 
+        });
+
+        Button btn = (Button)findViewById(R.id.open_activity_button);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MyApplicationActivity.this, PickMood.class));
+            }
         });
     }
 

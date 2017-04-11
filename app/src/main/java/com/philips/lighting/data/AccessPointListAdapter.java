@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.philips.lighting.R;
 import com.philips.lighting.hue.sdk.PHAccessPoint;
-import com.philips.lighting.quickstart.R;
 
 /**
  * This class provides adapter view for a list of Found Bridges.
