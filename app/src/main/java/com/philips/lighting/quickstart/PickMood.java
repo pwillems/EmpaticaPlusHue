@@ -53,7 +53,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
     private static final int REQUEST_ENABLE_BT = 1;
     private static final int REQUEST_PERMISSION_ACCESS_COARSE_LOCATION = 1;
 
-    private static final long STREAMING_TIME = 100000; // Stops streaming 100 seconds after connection
+    private static final long STREAMING_TIME = 10000; // Stops streaming 10 seconds after connection
 
     private static final String EMPATICA_API_KEY = "4f6e0427bda8425d9f31fc9b02874af9"; // TODO insert your API Key here
 
@@ -79,10 +79,10 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
         statusLabel = (TextView) findViewById(R.id.statusText);
         initEmpaticaDeviceManager();
 
-        PHBridge bridge = phHueSDK.getSelectedBridge();
-        List<PHLight> allLights = bridge.getResourceCache().getAllLights();
+        // PHBridge bridge = phHueSDK.getSelectedBridge();
+        // List<PHLight> allLights = bridge.getResourceCache().getAllLights();
 
-        Log.w(TAG, "Activity opened");
+        Log.w(TAG, "Pick a Mood Activity opened");
 
         ImageButton tenseButton;
         tenseButton = (ImageButton) findViewById(R.id.imageButton1);
@@ -285,10 +285,12 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             updateLabel(statusLabel, status.name() + " - Turn on your device");
             // Start scanning
             deviceManager.startScanning();
+            Log.i(TAG, "The app is starting to scan for the E4");
             // The device manager has established a connection
         } else if (status == EmpaStatus.CONNECTED) {
-            // Stop streaming after STREAMING_TIME
-            runOnUiThread(new Runnable() {
+            Log.i(TAG, "Empatica is Connected");
+            // Stop streaming after STREAMING_TIME - Deze aanpassen om fulltime te streamen!
+            /*runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     new Handler().postDelayed(new Runnable() {
@@ -299,10 +301,10 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
                         }
                     }, STREAMING_TIME);
                 }
-            });
+            });*/
             // The device manager disconnected from a device
         } else if (status == EmpaStatus.DISCONNECTED) {
-
+            Log.i(TAG, "Empatica is Disconnected");
         }
     }
 

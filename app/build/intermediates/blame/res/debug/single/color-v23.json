@@ -1,42 +1,42 @@
 [
     {
-        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\color-v23\\abc_color_highlight_material.xml"
+        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/Users/pimwillems/.android/build-cache/f16cf47ec344c1cc16b80481ce7b0affb153f052/output/res/color-v23/abc_tint_spinner.xml"
     },
     {
-        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_default.xml",
-        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\color-v23\\abc_tint_default.xml"
+        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/Users/pimwillems/.android/build-cache/f16cf47ec344c1cc16b80481ce7b0affb153f052/output/res/color-v23/abc_tint_edittext.xml"
     },
     {
-        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_btn_checkable.xml",
-        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\color-v23\\abc_tint_btn_checkable.xml"
+        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/Users/pimwillems/.android/build-cache/f16cf47ec344c1cc16b80481ce7b0affb153f052/output/res/color-v23/abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_edittext.xml",
-        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\color-v23\\abc_tint_edittext.xml"
+        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/pimwillems/.android/build-cache/f16cf47ec344c1cc16b80481ce7b0affb153f052/output/res/color-v23/abc_btn_colored_text_material.xml"
     },
     {
-        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_text_material.xml",
-        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\color-v23\\abc_btn_colored_text_material.xml"
+        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/Users/pimwillems/.android/build-cache/f16cf47ec344c1cc16b80481ce7b0affb153f052/output/res/color-v23/abc_tint_switch_track.xml"
     },
     {
-        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_spinner.xml",
-        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\color-v23\\abc_tint_spinner.xml"
+        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/pimwillems/.android/build-cache/f16cf47ec344c1cc16b80481ce7b0affb153f052/output/res/color-v23/abc_tint_btn_checkable.xml"
     },
     {
-        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_track.xml",
-        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\color-v23\\abc_tint_switch_track.xml"
+        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/Users/pimwillems/.android/build-cache/f16cf47ec344c1cc16b80481ce7b0affb153f052/output/res/color-v23/abc_tint_default.xml"
     },
     {
-        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_seek_thumb.xml",
-        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\color-v23\\abc_tint_seek_thumb.xml"
+        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/Users/pimwillems/.android/build-cache/f16cf47ec344c1cc16b80481ce7b0affb153f052/output/res/color-v23/abc_tint_switch_thumb.xml"
     },
     {
-        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
-        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
+        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/pimwillems/.android/build-cache/f16cf47ec344c1cc16b80481ce7b0affb153f052/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_thumb.xml",
-        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\color-v23\\abc_tint_switch_thumb.xml"
+        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/pimwillems/.android/build-cache/f16cf47ec344c1cc16b80481ce7b0affb153f052/output/res/color-v23/abc_color_highlight_material.xml"
     }
 ]

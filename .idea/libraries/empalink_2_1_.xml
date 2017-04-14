@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="empalink-2.1-">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/a8719cdd32d8fbb1e17cc13412647bbf9e0b452f/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/a8719cdd32d8fbb1e17cc13412647bbf9e0b452f/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

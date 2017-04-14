@@ -67,14 +67,21 @@ public class PHHomeActivity extends Activity implements OnItemClickListener {
         phHueSDK.getNotificationManager().registerSDKListener(listener);
         
         adapter = new AccessPointListAdapter(getApplicationContext(), phHueSDK.getAccessPointsFound());
-        
+
+        // Handmatig de accesspoint zetten
+        // PHAccessPoint accessPoint = new PHAccessPoint();
+        // accessPoint.setIpAddress("130.89.15.83");
+        // accessPoint.setUsername("QuickStartApp");
+        // phHueSDK.connect(accessPoint);
+
         ListView accessPointList = (ListView) findViewById(R.id.bridge_list);
         accessPointList.setOnItemClickListener(this);
         accessPointList.setAdapter(adapter);
         
         // Try to automatically connect to the last known bridge.  For first time use this will be empty so a bridge search is automatically started.
         prefs = HueSharedPreferences.getInstance(getApplicationContext());
-        String lastIpAddress   = prefs.getLastConnectedIPAddress();
+        // String lastIpAddress   = prefs.getLastConnectedIPAddress();
+        String lastIpAddress = "192.168.2.15";
         String lastUsername    = prefs.getUsername();
 
         // Automatically try to connect to the last connected IP Address.  For multiple bridge support a different implementation is required.
