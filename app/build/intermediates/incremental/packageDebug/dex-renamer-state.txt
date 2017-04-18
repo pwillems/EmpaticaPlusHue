@@ -1,4 +1,4 @@
-#Thu Apr 13 12:03:37 CEST 2017
+#Sun Apr 16 12:38:36 CEST 2017
 base.0=/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3857984cfedf82c75afd0862aa613b5c26c2fdba
 renamed.1=classes.dex
 renamed.0=classes2.dex

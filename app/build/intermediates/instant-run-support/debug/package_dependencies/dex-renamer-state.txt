@@ -1,4 +1,4 @@
-#Thu Apr 13 12:03:35 CEST 2017
+#Sun Apr 16 12:38:33 CEST 2017
 file.2=/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_63b2de94a447737acb12bb556d6275c670630ab0/classes.dex
 base.2=/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_63b2de94a447737acb12bb556d6275c670630ab0
 file.1=/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a28e8e78268d0ecbb5dd20843d5f47131886d209/classes.dex

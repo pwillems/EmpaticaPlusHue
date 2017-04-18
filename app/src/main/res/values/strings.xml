@@ -20,6 +20,7 @@
     <string name="btn_ok">Ok</string>
     <string name="btn_cancel">Cancel</string>
     <string name="btn_pnm">Go to Pick n Mix</string>
+    <string name="btn_e4">Connect to the E4</string>
     <string name="txt_could_not_connect">No connection</string>
     <string name="txt_click_random_button">The following button uses the connected lamps and sets them to random colours.</string>
     <string name="txt_click_main_colours_button">Click the buttons below to set the lights to one basic colour.</string>

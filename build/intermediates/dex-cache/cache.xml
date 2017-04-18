@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
         <dex dex="/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3857984cfedf82c75afd0862aa613b5c26c2fdba/classes.dex" />
     </item>
     <item
@@ -43,7 +43,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="1014afae34fd2802fbee24c427db7ec239e6654c">
+        sha1="ba96c835a3431ef4b9b4983626570d175fce01b9">
         <dex dex="/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_949be5ad44e7f8bf8b4654bcceb5cc54b885e586/classes.dex" />
     </item>
 

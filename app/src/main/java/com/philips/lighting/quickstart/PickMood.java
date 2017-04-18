@@ -48,12 +48,12 @@ import java.util.List;
  */
 public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDelegate {
     private PHHueSDK phHueSDK;
-    public static final String TAG = "QuickStart";
+    public static final String TAG = "Pick-A-Mood";
 
     private static final int REQUEST_ENABLE_BT = 1;
     private static final int REQUEST_PERMISSION_ACCESS_COARSE_LOCATION = 1;
 
-    private static final long STREAMING_TIME = 10000; // Stops streaming 10 seconds after connection
+    private static final long STREAMING_TIME = 100000; // Stops streaming 10 seconds after connection
 
     private static final String EMPATICA_API_KEY = "4f6e0427bda8425d9f31fc9b02874af9"; // TODO insert your API Key here
 
@@ -77,12 +77,23 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
         phHueSDK = PHHueSDK.create();
 
         statusLabel = (TextView) findViewById(R.id.statusText);
-        initEmpaticaDeviceManager();
 
         // PHBridge bridge = phHueSDK.getSelectedBridge();
         // List<PHLight> allLights = bridge.getResourceCache().getAllLights();
 
         Log.w(TAG, "Pick a Mood Activity opened");
+
+        /* Set the onClick for the E4 button */
+        Button e4Button;
+        e4Button = (Button) findViewById(R.id.e4Button);
+        e4Button.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                initEmpaticaDeviceManager();
+            }
+
+        });
 
         ImageButton tenseButton;
         tenseButton = (ImageButton) findViewById(R.id.imageButton1);
@@ -290,18 +301,19 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
         } else if (status == EmpaStatus.CONNECTED) {
             Log.i(TAG, "Empatica is Connected");
             // Stop streaming after STREAMING_TIME - Deze aanpassen om fulltime te streamen!
-            /*runOnUiThread(new Runnable() {
+            runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             // Disconnect device
+                            Log.i(TAG, "Klaar met de timer, nu stoppen");
                             deviceManager.disconnect();
                         }
                     }, STREAMING_TIME);
                 }
-            });*/
+            });
             // The device manager disconnected from a device
         } else if (status == EmpaStatus.DISCONNECTED) {
             Log.i(TAG, "Empatica is Disconnected");

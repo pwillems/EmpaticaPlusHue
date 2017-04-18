@@ -51,9 +51,11 @@
             android:label="@string/title_activity_pick_mood" />
 
         <service android:name="com.empatica.empalink.EmpaLinkBLE" />
-        <service
-            android:name="com.android.tools.fd.runtime.InstantRunService"
-            android:exported="true" />
+
+        <provider
+            android:name="com.android.tools.fd.runtime.InstantRunContentProvider"
+            android:authorities="com.philips.lighting.quickstart.com.android.tools.fd.runtime.InstantRunContentProvider"
+            android:multiprocess="true" />
     </application>
 
 </manifest>

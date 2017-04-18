@@ -1,4 +1,4 @@
-#Thu Apr 13 12:03:36 CEST 2017
+#Sun Apr 16 12:38:35 CEST 2017
 base.0=/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7
 renamed.0=classes.dex
 file.0=/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex
