@@ -1,10 +1,18 @@
 [
     {
-        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/menu/bridgelist.xml",
-        "source": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/res/menu/bridgelist.xml"
+        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\menu\\home.xml",
+        "source": "D:\\Android\\EmpaticaPlusHue\\app\\src\\main\\res\\menu\\home.xml"
     },
     {
-        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/menu/home.xml",
-        "source": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/res/menu/home.xml"
+        "merged": "D:\\Users\\pimwillems\\Desktop\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\menu\\bridgelist.xml",
+        "source": "D:\\Users\\pimwillems\\Desktop\\EmpaticaPlusHue\\app\\src\\main\\res\\menu\\bridgelist.xml"
+    },
+    {
+        "merged": "D:\\Users\\pimwillems\\Desktop\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\menu\\home.xml",
+        "source": "D:\\Users\\pimwillems\\Desktop\\EmpaticaPlusHue\\app\\src\\main\\res\\menu\\home.xml"
+    },
+    {
+        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\menu\\bridgelist.xml",
+        "source": "D:\\Android\\EmpaticaPlusHue\\app\\src\\main\\res\\menu\\bridgelist.xml"
     }
 ]

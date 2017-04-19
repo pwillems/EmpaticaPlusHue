@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_launcher.png",
-        "source": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/res/drawable-hdpi/ic_launcher.png"
+        "merged": "D:\\Users\\pimwillems\\Desktop\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "D:\\Users\\pimwillems\\Desktop\\EmpaticaPlusHue\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "D:\\Android\\EmpaticaPlusHue\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     }
 ]

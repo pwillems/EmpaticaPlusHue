@@ -1,7 +1,4 @@
-#Sun Apr 16 12:38:36 CEST 2017
-base.0=/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3857984cfedf82c75afd0862aa613b5c26c2fdba
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_949be5ad44e7f8bf8b4654bcceb5cc54b885e586/classes.dex
-base.1=/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_949be5ad44e7f8bf8b4654bcceb5cc54b885e586
-file.0=/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3857984cfedf82c75afd0862aa613b5c26c2fdba/classes.dex
+#Wed Apr 19 19:42:08 CEST 2017
+base.0=D\:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=D\:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

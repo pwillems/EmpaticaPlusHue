@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -41,6 +42,7 @@ import com.philips.lighting.model.PHLight;
 import com.philips.lighting.model.PHLightState;
 import com.philips.lighting.toolsd.LightsController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -59,20 +61,29 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
 
     private EmpaDeviceManager deviceManager = null;
 
-    public boolean tense = false;
-    public boolean irritated = false;
-    public boolean cheerful = false;
-    public boolean exited = false;
-    public boolean bored = false;
-    public boolean gloomy = false;
-    public boolean calm = false;
-    public boolean relaxed = false;
+    public Boolean tense = false;
+    public Boolean irritated = false;
+    public Boolean cheerful = false;
+    public Boolean exited = false;
+    public Boolean bored = false;
+    public Boolean gloomy = false;
+    public Boolean calm = false;
+    public Boolean relaxed = false;
+
+    public List edaMeasures = new ArrayList();
+    public Double edaMean = 0.00;
+    public Integer threshhold = 1;
+    public Double standardDev = 0.00;
+    public Long startTime = System.currentTimeMillis();
+    public Long timer = System.currentTimeMillis();
+    public Integer durationTimer = 60000;
 
     private TextView statusLabel;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_pick_mood);
         phHueSDK = PHHueSDK.create();
 
@@ -82,6 +93,8 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
         // List<PHLight> allLights = bridge.getResourceCache().getAllLights();
 
         Log.w(TAG, "Pick a Mood Activity opened");
+
+        final LinearLayout pickAmood = (LinearLayout) findViewById(R.id.layout_pickAmood);
 
         /* Set the onClick for the E4 button */
         Button e4Button;
@@ -93,6 +106,62 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
                 initEmpaticaDeviceManager();
             }
 
+        });
+
+        final Button showPickAMood;
+        final Button hidePickAMood;
+        hidePickAMood = (Button) findViewById(R.id.btn_HidePick);
+        showPickAMood = (Button) findViewById(R.id.btn_ShowPick);
+        showPickAMood.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                pickAmood.setVisibility(LinearLayout.VISIBLE);
+                showPickAMood.setVisibility(Button.GONE);
+                hidePickAMood.setVisibility(Button.VISIBLE);
+            }
+
+        });
+        hidePickAMood.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                pickAmood.setVisibility(LinearLayout.GONE);
+                showPickAMood.setVisibility(Button.VISIBLE);
+                hidePickAMood.setVisibility(Button.GONE);
+            }
+
+        });
+
+        Button setStateNeutral;
+        Button setStateCozy;
+        Button setStateConcentration;
+        setStateNeutral = (Button) findViewById(R.id.btn_neutral);
+        setStateCozy = (Button) findViewById(R.id.btn_cozy);
+        setStateConcentration = (Button) findViewById(R.id.btn_concentration);
+
+        setStateNeutral.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.w(TAG, "Neutral Clicked");
+                LightsController.changeLights(12000, 200, 200, null);
+            }
+        });
+
+        setStateCozy.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.w(TAG, "Neutral Clicked");
+                LightsController.changeLights(22000, 200, 200, null);
+            }
+        });
+
+        setStateConcentration.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.w(TAG, "Neutral Clicked");
+                LightsController.changeLights(32000, 200, 200, null);
+            }
         });
 
         ImageButton tenseButton;
@@ -115,6 +184,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             public void onClick(View v) {
                 irritated = true;
                 Log.w(TAG, "Irritated Clicked");
+                LightsController.changeLights(15000, 200, 200, null);
             }
         });
 
@@ -290,6 +360,8 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
     public void didUpdateStatus(EmpaStatus status) {
         // Update the UI
         updateLabel(statusLabel, status.name());
+
+
 
         // The device manager is ready for use
         if (status == EmpaStatus.READY) {

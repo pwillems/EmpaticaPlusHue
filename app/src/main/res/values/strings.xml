@@ -41,6 +41,14 @@
     <string name="txt_last_heartbeat">Last Heartbeat : </string>
     <string name="title_activity_pick_mood">Pick-A-Mood</string>
 
+    <string name="user_input">Select colour scheme</string>
+    <string name="user_input_concentration">Concentration</string>
+    <string name="user_input_cozy">Cozy</string>
+    <string name="user_input_neutral">Neutral</string>
+
+    <string name="btn_show_pick">Show Pick-A-Mood</string>
+    <string name="btn_hide_pick">Hide Pick-A-Mood</string>
+
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
