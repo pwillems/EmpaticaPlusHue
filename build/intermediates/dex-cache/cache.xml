@@ -3,30 +3,30 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3dd9790a64f5bd6e724c286c8b1063b7762bc4e3">
-        <dex dex="D:\Android\EmpaticaPlusHue\app\build\intermediates\pre-dexed\debug\classes_683374a506835f3f115b9e4fc5ed2ee7320e4631.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Android\EmpaticaPlusHue\app\libs\huelocalsdk.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="07362e192094e402e032db4407c86e36080340ab">
-        <dex dex="D:\Android\EmpaticaPlusHue\app\build\intermediates\pre-dexed\debug\huelocalsdk_1417aaa5f41e94022fc596c8b57c5196d4452e91.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Android\EmpaticaPlusHue\app\libs\huesdkresources.jar"
+        jar="/Users/pimwillems/Desktop/EmpaticaPlusHue/app/libs/huesdkresources.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="7183fbb86900448556ef87d3af0db01a77c27a09">
-        <dex dex="D:\Android\EmpaticaPlusHue\app\build\intermediates\pre-dexed\debug\huesdkresources_247382439150fc2805ca8fbb32bc4fa2c7ffb75f.jar" />
+        <dex dex="/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/pre-dexed/debug/huesdkresources_8a8c55fdbdf537643e9ddcf3e4a32c7cf53ffcb6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pimwillems/Desktop/EmpaticaPlusHue/app/libs/huelocalsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="07362e192094e402e032db4407c86e36080340ab">
+        <dex dex="/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/pre-dexed/debug/huelocalsdk_4c4955a3ba2551c5eb3e752a06455d22593524d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3dd9790a64f5bd6e724c286c8b1063b7762bc4e3">
+        <dex dex="/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/pre-dexed/debug/classes_8c72a5402b7b5fda2f32a946cafb426202cbdaa5.jar" />
     </item>
 
 </items>

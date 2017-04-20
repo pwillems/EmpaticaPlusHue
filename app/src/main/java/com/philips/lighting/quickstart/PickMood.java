@@ -22,10 +22,10 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
-import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.empatica.empalink.ConnectionNotAllowedException;
 import com.empatica.empalink.EmpaDeviceManager;
 import com.empatica.empalink.config.EmpaSensorStatus;
 import com.empatica.empalink.config.EmpaSensorType;
@@ -33,17 +33,10 @@ import com.empatica.empalink.config.EmpaStatus;
 import com.empatica.empalink.delegate.EmpaDataDelegate;
 import com.empatica.empalink.delegate.EmpaStatusDelegate;
 import com.philips.lighting.R;
-import com.philips.lighting.hue.listener.PHLightListener;
 import com.philips.lighting.hue.sdk.PHHueSDK;
-import com.philips.lighting.model.PHBridge;
-import com.philips.lighting.model.PHBridgeResource;
-import com.philips.lighting.model.PHHueError;
-import com.philips.lighting.model.PHLight;
-import com.philips.lighting.model.PHLightState;
 import com.philips.lighting.toolsd.LightsController;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A login screen that offers login via email/password.
@@ -55,7 +48,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
     private static final int REQUEST_ENABLE_BT = 1;
     private static final int REQUEST_PERMISSION_ACCESS_COARSE_LOCATION = 1;
 
-    private static final long STREAMING_TIME = 100000; // Stops streaming 10 seconds after connection
+    private static final long STREAMING_TIME = 250000; // Stops streaming 10 seconds after connection
 
     private static final String EMPATICA_API_KEY = "4f6e0427bda8425d9f31fc9b02874af9"; // TODO insert your API Key here
 
@@ -70,13 +63,22 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
     public Boolean calm = false;
     public Boolean relaxed = false;
 
-    public List edaMeasures = new ArrayList();
-    public Double edaMean = 0.00;
-    public Integer threshhold = 1;
-    public Double standardDev = 0.00;
+    public Boolean currentlyNegative = false;
+
+    public Double valence = 0.0;
+    public Double valenceThreshold = -0.40;
+
+    public Boolean edaTempBool = false;
+    public ArrayList<Float> edaMeasures = new ArrayList<Float>();
+    public Float edaMean = 0.0f;
+    public ArrayList<Float> edaTempMeasures = new ArrayList<Float>();
+    public Integer threshold = 3;
+    public Double standardDev = 0.0;
     public Long startTime = System.currentTimeMillis();
     public Long timer = System.currentTimeMillis();
+    public Integer gsrSignalTimer = 2500;
     public Integer durationTimer = 60000;
+    public Long timerDelay = System.currentTimeMillis() + 10000;
 
     private TextView statusLabel;
 
@@ -94,8 +96,6 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
 
         Log.w(TAG, "Pick a Mood Activity opened");
 
-        final LinearLayout pickAmood = (LinearLayout) findViewById(R.id.layout_pickAmood);
-
         /* Set the onClick for the E4 button */
         Button e4Button;
         e4Button = (Button) findViewById(R.id.e4Button);
@@ -108,17 +108,15 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
 
         });
 
-        final Button showPickAMood;
-        final Button hidePickAMood;
-        hidePickAMood = (Button) findViewById(R.id.btn_HidePick);
-        showPickAMood = (Button) findViewById(R.id.btn_ShowPick);
+        final LinearLayout pickAmood = (LinearLayout) findViewById(R.id.layout_pickAmood);
+        final Button showPickAMood = (Button) findViewById(R.id.btn_ShowPick);
+        final Button hidePickAMood = (Button) findViewById(R.id.btn_HidePick);
+
         showPickAMood.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                pickAmood.setVisibility(LinearLayout.VISIBLE);
-                showPickAMood.setVisibility(Button.GONE);
-                hidePickAMood.setVisibility(Button.VISIBLE);
+                showPickAMood();
             }
 
         });
@@ -126,9 +124,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
 
             @Override
             public void onClick(View v) {
-                pickAmood.setVisibility(LinearLayout.GONE);
-                showPickAMood.setVisibility(Button.VISIBLE);
-                hidePickAMood.setVisibility(Button.GONE);
+                hidePickAMood();
             }
 
         });
@@ -164,6 +160,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             }
         });
 
+        // Initiate all the buttons and use them to change the valence rating
         ImageButton tenseButton;
         tenseButton = (ImageButton) findViewById(R.id.imageButton1);
 
@@ -172,7 +169,8 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             public void onClick(View v) {
                 tense = true;
                 Log.w(TAG, "Tense Clicked");
-                LightsController.changeLights(0, 200, 200, null);
+                valence = valence - 0.25;
+                hidePickAMood();
             }
         });
 
@@ -184,7 +182,8 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             public void onClick(View v) {
                 irritated = true;
                 Log.w(TAG, "Irritated Clicked");
-                LightsController.changeLights(15000, 200, 200, null);
+                valence = valence - 0.5;
+                hidePickAMood();
             }
         });
 
@@ -196,6 +195,8 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             public void onClick(View v) {
                 cheerful = true;
                 Log.w(TAG, "cheerful Clicked");
+                valence = valence + 0.5;
+                hidePickAMood();
             }
         });
 
@@ -207,6 +208,8 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             public void onClick(View v) {
                 exited = true;
                 Log.w(TAG, "exited Clicked");
+                valence = valence + 0.25;
+                hidePickAMood();
             }
         });
 
@@ -218,6 +221,8 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             public void onClick(View v) {
                 bored = true;
                 Log.w(TAG, "bored Clicked");
+                valence = valence - 0.25;
+                hidePickAMood();
             }
         });
 
@@ -229,6 +234,8 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             public void onClick(View v) {
                 gloomy = true;
                 Log.w(TAG, "gloomy Clicked");
+                valence = valence - 0.5;
+                hidePickAMood();
             }
         });
 
@@ -240,6 +247,8 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             public void onClick(View v) {
                 calm = true;
                 Log.w(TAG, "calm Clicked");
+                valence = valence + 0.25;
+                hidePickAMood();
             }
         });
 
@@ -251,6 +260,8 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             public void onClick(View v) {
                 relaxed = true;
                 Log.w(TAG, "relaxed Clicked");
+                valence = valence + 0.5;
+                hidePickAMood();
             }
         });
 
@@ -299,6 +310,37 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
         }
     }
 
+    private void showPickAMood() {
+
+        final LinearLayout pickAmood = (LinearLayout) findViewById(R.id.layout_pickAmood);
+        final Button showPickAMood = (Button) findViewById(R.id.btn_ShowPick);
+        final Button hidePickAMood = (Button) findViewById(R.id.btn_HidePick);
+
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                pickAmood.setVisibility(LinearLayout.VISIBLE);
+                showPickAMood.setVisibility(Button.GONE);
+                hidePickAMood.setVisibility(Button.VISIBLE);
+            }
+        });
+    }
+
+    private void hidePickAMood() {
+        final LinearLayout pickAmood = (LinearLayout) findViewById(R.id.layout_pickAmood);
+        final Button showPickAMood = (Button) findViewById(R.id.btn_ShowPick);
+        final Button hidePickAMood = (Button) findViewById(R.id.btn_HidePick);
+
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                pickAmood.setVisibility(LinearLayout.GONE);
+                showPickAMood.setVisibility(Button.VISIBLE);
+                hidePickAMood.setVisibility(Button.GONE);
+            }
+        });
+    }
+
     private void initEmpaticaDeviceManager() {
         // Android 6 (API level 23) now require ACCESS_COARSE_LOCATION permission to use BLE
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -307,6 +349,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
         } else {
             // Create a new EmpaDeviceManager. MainActivity is both its data and status delegate.
             deviceManager = new EmpaDeviceManager(getApplicationContext(), this, this);
+            Log.i("E4","New EmpaDeviceManager");
 
             if (TextUtils.isEmpty(EMPATICA_API_KEY)) {
                 new AlertDialog.Builder(this)
@@ -327,32 +370,105 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
     }
 
     @Override
-    public void didReceiveGSR(float v, double v1) {
+    public void didReceiveGSR(float gsr, double timestamp) {
+
+        // This is the location for the GSR data which is needed to check for arousal
+        if(edaTempBool == false){
+            startTime = System.currentTimeMillis();
+            edaTempBool = true;
+        }
+
+        // Check if the second (gsrSignalTimer) has passed to calculate new Mean and SD
+        if(System.currentTimeMillis() > startTime + gsrSignalTimer && System.currentTimeMillis() > timerDelay){
+
+            // First get the temp GSR measurement, so that it only have one GSR (mean) value per second
+            Float sum = 0.0f;
+            for(int i = 0; i < edaTempMeasures.size(); i++){
+                sum = sum + edaTempMeasures.get(i);
+            }
+            Float tempGSR = sum / edaTempMeasures.size();
+            edaMeasures.add(tempGSR);
+            edaTempMeasures.clear();
+
+            // After the GSR is updated, also update the mean GSR value
+            sum = 0.0f;
+            for(int i = 0; i < edaMeasures.size(); i++){
+                sum = sum + edaMeasures.get(i);
+            }
+            edaMean = sum / edaMeasures.size();
+
+            // Use the mean to calculate the Standard Deviation
+            sum = 0.0f;
+            for(int i = 0;i<edaMeasures.size();i++){
+                sum = sum + (edaMeasures.get(i) - edaMean) * (edaMeasures.get(i) - edaMean);
+            }
+            float squaredDiffMean = (sum) / (edaMeasures.size());
+            standardDev = (Math.sqrt(squaredDiffMean));
+
+            // Check if the current GSR value is bigger than the mean + SD value
+            Log.d("E4 GSR mean", "GSR Mean + SD Measure added: " + Float.toString(edaMean) + " " + Double.toString(standardDev));
+
+            if(tempGSR > edaMean + (threshold * standardDev) || tempGSR < edaMean - (threshold * standardDev)){
+                // There is a peak detected! Enable the Pick-A-Mood!
+                Log.d("E4 GSR", "Peak Detected! GSR is " + Float.toString(tempGSR));
+
+                showPickAMood();
+            }
+            else {
+                Log.d("E4 GSR", "No peak detected, ah");
+            }
+            startTime = System.currentTimeMillis();
+        }
+        else{
+            edaTempMeasures.add(gsr);
+            // Log.d("E4 GSR temp", "GSR Measure added");
+        }
+
+        // Check if the time has passed to prompt Pick-A-Mood
+        if(System.currentTimeMillis() > timer + durationTimer){
+            Log.d("E4 Timer", "Timer done, prompt Pick-A-Mood");
+
+            showPickAMood();
+
+            timer = System.currentTimeMillis();
+        }
+
+        // If the valence is too low, try to improve the mood
+        if(valence < valenceThreshold){
+            if(currentlyNegative == false) {
+                LightsController.changeLights(29000, 150, 150, null);
+                Log.w(TAG, "Valence has become to low, changing lights");
+                currentlyNegative = true;
+            }
+        }
+        else {
+            currentlyNegative = false;
+        }
 
     }
 
     @Override
-    public void didReceiveBVP(float v, double v1) {
+    public void didReceiveBVP(float bvp, double timestamp) {
 
     }
 
     @Override
-    public void didReceiveIBI(float v, double v1) {
+    public void didReceiveIBI(float ibi, double timestamp) {
 
     }
 
     @Override
-    public void didReceiveTemperature(float v, double v1) {
+    public void didReceiveTemperature(float temp, double timestamp) {
 
     }
 
     @Override
-    public void didReceiveAcceleration(int i, int i1, int i2, double v) {
+    public void didReceiveAcceleration(int x, int y, int z, double timestamp) {
 
     }
 
     @Override
-    public void didReceiveBatteryLevel(float v, double v1) {
+    public void didReceiveBatteryLevel(float battery, double timestamp) {
 
     }
 
@@ -360,8 +476,6 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
     public void didUpdateStatus(EmpaStatus status) {
         // Update the UI
         updateLabel(statusLabel, status.name());
-
-
 
         // The device manager is ready for use
         if (status == EmpaStatus.READY) {
@@ -398,8 +512,39 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
     }
 
     @Override
-    public void didDiscoverDevice(BluetoothDevice bluetoothDevice, String s, int i, boolean b) {
+    protected void onPause() {
+        super.onPause();
+        if (deviceManager != null) {
+            deviceManager.stopScanning();
+        }
+    }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (deviceManager != null) {
+            deviceManager.cleanUp();
+        }
+    }
+
+    @Override
+    public void didDiscoverDevice(BluetoothDevice bluetoothDevice, String deviceName, int rssi, boolean allowed) {
+        // Check if the discovered device can be used with your API key. If allowed is always false,
+        // the device is not linked with your API key. Please check your developer area at
+        // https://www.empatica.com/connect/developer.php
+        if (allowed) {
+            // Stop scanning. The first allowed device will do.
+            deviceManager.stopScanning();
+            try {
+                // Connect to the device
+                deviceManager.connectDevice(bluetoothDevice);
+                // updateLabel(deviceNameLabel, "To: " + deviceName);
+            } catch (ConnectionNotAllowedException e) {
+                // This should happen only if you try to connect when allowed == false.
+                Log.i("E4", "Toast error, allowed is off!");
+                // Toast.makeText(MainActivity.this, "Sorry, you can't connect to this device", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     @Override
@@ -407,6 +552,16 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
         // Request the user to enable Bluetooth
         Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
         startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // The user chose not to enable Bluetooth
+        if (requestCode == REQUEST_ENABLE_BT && resultCode == Activity.RESULT_CANCELED) {
+            // You should deal with this
+            return;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     // Update a label with some text, making sure this is run in the UI thread

@@ -1,157 +1,157 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:2:1-49:12
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:2:1-49:12
 	package
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:3:5-35
-		INJECTED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:3:5-35
+		INJECTED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:5:5-30
-		INJECTED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml
 	android:versionCode
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:4:5-28
-		INJECTED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:2:11-69
 uses-sdk
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:7:5-9:41
-MERGED from [:empalink-2.1:] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\Pim\.android\build-cache\0d3d92daf2475a88b41ccdc5371c34530343153d\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:25.1.0] C:\Users\Pim\.android\build-cache\9e1773d59758607b0d4ad62dc164953619e686c2\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.1.0] C:\Users\Pim\.android\build-cache\df5ae58782d170e4c7cb6c7a026d69ace767d113\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\Pim\.android\build-cache\b250772a3f1aa60c774bc2106011f65f7fcb221f\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\Pim\.android\build-cache\0ecf04af12ff64db40edcd3fe80c3ea70c2056cd\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\Pim\.android\build-cache\391bb411aeb8120b3d87bb0c0e7784d5303c3d12\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\Pim\.android\build-cache\9070322f85bb87320034ec04dfdf8655cca29c44\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.1.0] C:\Users\Pim\.android\build-cache\aaa17f06ed3dd72292055bd98e177ad8aef3d793\output\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-compat:25.1.0] C:\Users\Pim\.android\build-cache\1e770b1e6717fa9b9e4ba8cba3fe0e775906c0cf\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.empatica.empalink:empalink:2.1] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:7:5-9:41
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:7:5-9:41
+MERGED from [:empalink-2.1:] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.1.0] /Users/pimwillems/.android/build-cache/f16cf47ec344c1cc16b80481ce7b0affb153f052/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.1.0] /Users/pimwillems/.android/build-cache/edc7ea2c781d8e27b5c798be8aebf5ff6e94ff48/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.1.0] /Users/pimwillems/.android/build-cache/6f6867d5159c4364b7138076eb36c824897d022e/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.1.0] /Users/pimwillems/.android/build-cache/fdd91ad5cee99a2958740b04283d2e3d7014f98d/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.1.0] /Users/pimwillems/.android/build-cache/d93259b114d77d93ed20f66c90d390c918a0118a/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.1.0] /Users/pimwillems/.android/build-cache/48b195a9d90dad0179e2269d452cc874a411f421/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] /Users/pimwillems/.android/build-cache/8d29debbd256896d926781b97f77a78801cebfb2/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.1.0] /Users/pimwillems/.android/build-cache/24b46f2c4a086d21dcb06e298f4e790b10ca637c/output/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:25.1.0] /Users/pimwillems/.android/build-cache/868c7c5d4043c83b2eff9bc33ee7478a7c1e3885/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.empatica.empalink:empalink:2.1] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:25.1.0] C:\Users\Pim\.android\build-cache\0d3d92daf2475a88b41ccdc5371c34530343153d\output\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:25.1.0] /Users/pimwillems/.android/build-cache/f16cf47ec344c1cc16b80481ce7b0affb153f052/output/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:9:9-38
-		INJECTED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:9:9-38
+		INJECTED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:8:9-34
-		INJECTED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:8:9-34
+		INJECTED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:11:5-67
-MERGED from [:empalink-2.1:] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:13:5-67
-MERGED from [com.empatica.empalink:empalink:2.1] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:13:5-67
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:11:5-67
+MERGED from [:empalink-2.1:] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:13:5-67
+MERGED from [com.empatica.empalink:empalink:2.1] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:13:5-67
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:11:22-64
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:11:22-64
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:13:5-71
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:13:5-71
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:13:22-68
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:13:22-68
 uses-permission#android.permission.READ_PROFILE
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:14:5-71
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:14:5-71
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:14:22-68
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:14:22-68
 uses-permission#android.permission.READ_CONTACTS
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:15:5-72
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:15:5-72
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:15:22-69
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:15:22-69
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:16:5-81
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:16:5-81
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:16:22-78
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:16:22-78
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:17:5-75
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:17:5-75
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:17:22-72
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:17:22-72
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:18:5-80
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:18:5-80
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:18:22-77
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:18:22-77
 uses-permission#android.permission.READ_CALL_LOG
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:19:5-72
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:19:5-72
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:19:22-69
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:19:22-69
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:21:5-81
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:21:5-81
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:21:22-78
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:21:22-78
 application
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:23:5-47:19
-MERGED from [:empalink-2.1:] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:19:5-24:19
-MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\Pim\.android\build-cache\0d3d92daf2475a88b41ccdc5371c34530343153d\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:25.1.0] C:\Users\Pim\.android\build-cache\9e1773d59758607b0d4ad62dc164953619e686c2\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.1.0] C:\Users\Pim\.android\build-cache\df5ae58782d170e4c7cb6c7a026d69ace767d113\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.1.0] C:\Users\Pim\.android\build-cache\b250772a3f1aa60c774bc2106011f65f7fcb221f\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\Pim\.android\build-cache\0ecf04af12ff64db40edcd3fe80c3ea70c2056cd\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\Pim\.android\build-cache\391bb411aeb8120b3d87bb0c0e7784d5303c3d12\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\Pim\.android\build-cache\9070322f85bb87320034ec04dfdf8655cca29c44\output\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.1.0] C:\Users\Pim\.android\build-cache\aaa17f06ed3dd72292055bd98e177ad8aef3d793\output\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:support-compat:25.1.0] C:\Users\Pim\.android\build-cache\1e770b1e6717fa9b9e4ba8cba3fe0e775906c0cf\output\AndroidManifest.xml:25:5-20
-MERGED from [com.empatica.empalink:empalink:2.1] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:19:5-24:19
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:23:5-47:19
+MERGED from [:empalink-2.1:] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:19:5-24:19
+MERGED from [com.android.support:appcompat-v7:25.1.0] /Users/pimwillems/.android/build-cache/f16cf47ec344c1cc16b80481ce7b0affb153f052/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.1.0] /Users/pimwillems/.android/build-cache/edc7ea2c781d8e27b5c798be8aebf5ff6e94ff48/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.1.0] /Users/pimwillems/.android/build-cache/6f6867d5159c4364b7138076eb36c824897d022e/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.0] /Users/pimwillems/.android/build-cache/fdd91ad5cee99a2958740b04283d2e3d7014f98d/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.0] /Users/pimwillems/.android/build-cache/d93259b114d77d93ed20f66c90d390c918a0118a/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.0] /Users/pimwillems/.android/build-cache/48b195a9d90dad0179e2269d452cc874a411f421/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] /Users/pimwillems/.android/build-cache/8d29debbd256896d926781b97f77a78801cebfb2/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.0] /Users/pimwillems/.android/build-cache/24b46f2c4a086d21dcb06e298f4e790b10ca637c/output/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:25.1.0] /Users/pimwillems/.android/build-cache/868c7c5d4043c83b2eff9bc33ee7478a7c1e3885/output/AndroidManifest.xml:25:5-20
+MERGED from [com.empatica.empalink:empalink:2.1] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:19:5-24:19
 	android:label
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:27:9-41
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:27:9-41
 	android:allowBackup
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:25:9-35
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:25:9-35
 	android:icon
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:26:9-45
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:26:9-45
 	android:theme
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:28:9-40
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:28:9-40
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:24:9-61
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:24:9-61
 activity#com.philips.lighting.quickstart.PHHomeActivity
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:29:9-37:20
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:29:9-37:20
 	android:label
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:31:13-45
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:31:13-45
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:30:13-54
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:30:13-54
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:32:13-36:29
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:32:13-36:29
 action#android.intent.action.MAIN
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:33:17-69
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:33:17-69
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:33:25-66
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:33:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:35:17-77
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:35:17-77
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:35:27-74
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:35:27-74
 activity#com.philips.lighting.quickstart.MyApplicationActivity
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:38:9-40:66
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:38:9-40:66
 	android:label
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:40:13-54
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:40:13-54
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:39:13-61
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:39:13-61
 activity#com.philips.lighting.quickstart.PHPushlinkActivity
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:41:9-43:57
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:41:9-43:57
 	android:label
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:43:13-45
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:43:13-45
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:42:13-58
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:42:13-58
 activity#com.philips.lighting.quickstart.PickMood
-ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:44:9-46:73
+ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:44:9-46:73
 	android:label
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:46:13-61
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:46:13-61
 	android:name
-		ADDED from D:\Android\EmpaticaPlusHue\app\src\main\AndroidManifest.xml:45:13-48
+		ADDED from /Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/AndroidManifest.xml:45:13-48
 uses-permission#android.permission.BLUETOOTH
-ADDED from [:empalink-2.1:] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:11:5-68
-MERGED from [com.empatica.empalink:empalink:2.1] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:11:5-68
+ADDED from [:empalink-2.1:] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:11:5-68
+MERGED from [com.empatica.empalink:empalink:2.1] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:11:5-68
 	android:name
-		ADDED from [:empalink-2.1:] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:11:22-65
+		ADDED from [:empalink-2.1:] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:11:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from [:empalink-2.1:] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:12:5-74
-MERGED from [com.empatica.empalink:empalink:2.1] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:12:5-74
+ADDED from [:empalink-2.1:] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:12:5-74
+MERGED from [com.empatica.empalink:empalink:2.1] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:12:5-74
 	android:name
-		ADDED from [:empalink-2.1:] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:12:22-71
+		ADDED from [:empalink-2.1:] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:12:22-71
 uses-feature#android.hardware.bluetooth_le
-ADDED from [:empalink-2.1:] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:15:5-17:35
-MERGED from [com.empatica.empalink:empalink:2.1] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:15:5-17:35
+ADDED from [:empalink-2.1:] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:15:5-17:35
+MERGED from [com.empatica.empalink:empalink:2.1] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:15:5-17:35
 	android:required
-		ADDED from [:empalink-2.1:] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:17:9-32
+		ADDED from [:empalink-2.1:] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:17:9-32
 	android:name
-		ADDED from [:empalink-2.1:] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:16:9-53
+		ADDED from [:empalink-2.1:] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:16:9-53
 service#com.empatica.empalink.EmpaLinkBLE
-ADDED from [:empalink-2.1:] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:23:9-69
-MERGED from [com.empatica.empalink:empalink:2.1] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:23:9-69
+ADDED from [:empalink-2.1:] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:23:9-69
+MERGED from [com.empatica.empalink:empalink:2.1] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:23:9-69
 	android:name
-		ADDED from [:empalink-2.1:] C:\Users\Pim\.android\build-cache\a8719cdd32d8fbb1e17cc13412647bbf9e0b452f\output\AndroidManifest.xml:23:18-66
+		ADDED from [:empalink-2.1:] /Users/pimwillems/.android/build-cache/72c0499dfb2463d7a77ae6531ba4ac075fbad4db/output/AndroidManifest.xml:23:18-66

@@ -1,18 +1,10 @@
 [
     {
-        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_launcher.png",
-        "source": "D:\\Android\\EmpaticaPlusHue\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_launcher.png",
+        "source": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/res/drawable-mdpi/ic_launcher.png"
     },
     {
-        "merged": "D:\\Users\\pimwillems\\Desktop\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_launcher.png",
-        "source": "D:\\Users\\pimwillems\\Desktop\\EmpaticaPlusHue\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\image_clear.png",
-        "source": "D:\\Android\\EmpaticaPlusHue\\app\\src\\main\\res\\drawable-mdpi\\image_clear.png"
-    },
-    {
-        "merged": "D:\\Users\\pimwillems\\Desktop\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\image_clear.png",
-        "source": "D:\\Users\\pimwillems\\Desktop\\EmpaticaPlusHue\\app\\src\\main\\res\\drawable-mdpi\\image_clear.png"
+        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/drawable-mdpi/image_clear.png",
+        "source": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/res/drawable-mdpi/image_clear.png"
     }
 ]

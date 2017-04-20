@@ -1,18 +1,10 @@
 [
     {
-        "merged": "D:\\Users\\pimwillems\\Desktop\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "D:\\Users\\pimwillems\\.android\\build-cache\\f16cf47ec344c1cc16b80481ce7b0affb153f052\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/pimwillems/.android/build-cache/f16cf47ec344c1cc16b80481ce7b0affb153f052/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
     },
     {
-        "merged": "D:\\Users\\pimwillems\\Desktop\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "D:\\Users\\pimwillems\\.android\\build-cache\\f16cf47ec344c1cc16b80481ce7b0affb153f052\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
-        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
-    },
-    {
-        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "C:\\Users\\Pim\\.android\\build-cache\\0d3d92daf2475a88b41ccdc5371c34530343153d\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/pimwillems/.android/build-cache/f16cf47ec344c1cc16b80481ce7b0affb153f052/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
     }
 ]

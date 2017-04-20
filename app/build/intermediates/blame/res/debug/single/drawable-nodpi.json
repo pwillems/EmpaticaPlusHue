@@ -1,10 +1,6 @@
 [
     {
-        "merged": "D:\\Android\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\pushlink_image.png",
-        "source": "D:\\Android\\EmpaticaPlusHue\\app\\src\\main\\res\\drawable-nodpi\\pushlink_image.png"
-    },
-    {
-        "merged": "D:\\Users\\pimwillems\\Desktop\\EmpaticaPlusHue\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\pushlink_image.png",
-        "source": "D:\\Users\\pimwillems\\Desktop\\EmpaticaPlusHue\\app\\src\\main\\res\\drawable-nodpi\\pushlink_image.png"
+        "merged": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/build/intermediates/res/merged/debug/drawable-nodpi/pushlink_image.png",
+        "source": "/Users/pimwillems/Desktop/EmpaticaPlusHue/app/src/main/res/drawable-nodpi/pushlink_image.png"
     }
 ]
