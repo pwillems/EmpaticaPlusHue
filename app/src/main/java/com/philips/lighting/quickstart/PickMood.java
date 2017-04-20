@@ -64,6 +64,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
     public Boolean relaxed = false;
 
     public Boolean currentlyNegative = false;
+    public Boolean manualPeak = false;
 
     public Double valence = 0.0;
     public Double valenceThreshold = -0.40;
@@ -80,6 +81,9 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
     public Integer durationTimer = 60000;
     public Long timerDelay = System.currentTimeMillis() + 10000;
 
+    public Integer lightState;
+    public Integer lightStateSwitch;
+
     private TextView statusLabel;
 
     @Override
@@ -88,6 +92,11 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
 
         setContentView(R.layout.activity_pick_mood);
         phHueSDK = PHHueSDK.create();
+
+        // Set the lights to neutral state
+        lightState = 0;
+        lightStateSwitch = 0;
+        LightsController.changeLights(24000, 150, 150, null);
 
         statusLabel = (TextView) findViewById(R.id.statusText);
 
@@ -129,34 +138,43 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
 
         });
 
+        Button manualPeakButton;
         Button setStateNeutral;
         Button setStateCozy;
         Button setStateConcentration;
+        manualPeakButton = (Button) findViewById(R.id.btn_manualpeak);
         setStateNeutral = (Button) findViewById(R.id.btn_neutral);
         setStateCozy = (Button) findViewById(R.id.btn_cozy);
         setStateConcentration = (Button) findViewById(R.id.btn_concentration);
+
+        manualPeakButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                manualPeak = true;
+            }
+        });
 
         setStateNeutral.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.w(TAG, "Neutral Clicked");
-                LightsController.changeLights(12000, 200, 200, null);
+                lightState = 0;
             }
         });
 
         setStateCozy.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.w(TAG, "Neutral Clicked");
-                LightsController.changeLights(22000, 200, 200, null);
+                Log.w(TAG, "Cozy Clicked");
+                lightState = 1;
             }
         });
 
         setStateConcentration.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.w(TAG, "Neutral Clicked");
-                LightsController.changeLights(32000, 200, 200, null);
+                Log.w(TAG, "Concentration Clicked");
+                lightState = 2;
             }
         });
 
@@ -168,8 +186,8 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             @Override
             public void onClick(View v) {
                 tense = true;
-                Log.w(TAG, "Tense Clicked");
                 valence = valence - 0.25;
+                Log.w(TAG, "Tense Clicked" + Double.toString(valence));
                 hidePickAMood();
             }
         });
@@ -181,8 +199,8 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             @Override
             public void onClick(View v) {
                 irritated = true;
-                Log.w(TAG, "Irritated Clicked");
                 valence = valence - 0.5;
+                Log.w(TAG, "Irritated Clicked" + Double.toString(valence));
                 hidePickAMood();
             }
         });
@@ -194,8 +212,8 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             @Override
             public void onClick(View v) {
                 cheerful = true;
-                Log.w(TAG, "cheerful Clicked");
                 valence = valence + 0.5;
+                Log.w(TAG, "cheerful Clicked" + Double.toString(valence));
                 hidePickAMood();
             }
         });
@@ -207,8 +225,8 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             @Override
             public void onClick(View v) {
                 exited = true;
-                Log.w(TAG, "exited Clicked");
                 valence = valence + 0.25;
+                Log.w(TAG, "exited Clicked" + Double.toString(valence));
                 hidePickAMood();
             }
         });
@@ -220,8 +238,8 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             @Override
             public void onClick(View v) {
                 bored = true;
-                Log.w(TAG, "bored Clicked");
                 valence = valence - 0.25;
+                Log.w(TAG, "bored Clicked" + Double.toString(valence));
                 hidePickAMood();
             }
         });
@@ -233,7 +251,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             @Override
             public void onClick(View v) {
                 gloomy = true;
-                Log.w(TAG, "gloomy Clicked");
+                Log.w(TAG, "gloomy Clicked" + Double.toString(valence));
                 valence = valence - 0.5;
                 hidePickAMood();
             }
@@ -246,7 +264,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             @Override
             public void onClick(View v) {
                 calm = true;
-                Log.w(TAG, "calm Clicked");
+                Log.w(TAG, "calm Clicked" + Double.toString(valence));
                 valence = valence + 0.25;
                 hidePickAMood();
             }
@@ -259,7 +277,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             @Override
             public void onClick(View v) {
                 relaxed = true;
-                Log.w(TAG, "relaxed Clicked");
+                Log.w(TAG, "relaxed Clicked" + Double.toString(valence));
                 valence = valence + 0.5;
                 hidePickAMood();
             }
@@ -408,11 +426,14 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             // Check if the current GSR value is bigger than the mean + SD value
             Log.d("E4 GSR mean", "GSR Mean + SD Measure added: " + Float.toString(edaMean) + " " + Double.toString(standardDev));
 
-            if(tempGSR > edaMean + (threshold * standardDev) || tempGSR < edaMean - (threshold * standardDev)){
+            if(tempGSR > edaMean + (threshold * standardDev) || tempGSR < edaMean - (threshold * standardDev) || manualPeak == true){
                 // There is a peak detected! Enable the Pick-A-Mood!
                 Log.d("E4 GSR", "Peak Detected! GSR is " + Float.toString(tempGSR));
 
                 showPickAMood();
+                if(manualPeak = true) {
+                    manualPeak = false;
+                }
             }
             else {
                 Log.d("E4 GSR", "No peak detected, ah");
@@ -442,7 +463,31 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             }
         }
         else {
+            if(currentlyNegative == true){
+                Log.w(TAG, "Valence is normal");
+                lightStateSwitch = 4;
+            }
             currentlyNegative = false;
+            // Set the old lightstate back on
+        }
+
+        if(lightState == 0 && !lightState.equals(lightStateSwitch)){
+            // Neutral Light State needs to be set active
+            LightsController.changeLights(24000, 150, 150, null);
+            Log.i("Hue", "Lightstate updated " + lightState + lightStateSwitch);
+            lightStateSwitch = lightState;
+        }
+        if(lightState == 1 && !lightState.equals(lightStateSwitch)){
+            // Coze Light State needs to be set active
+            LightsController.changeLights(0, 100, 100, null);
+            Log.i("Hue", "Lightstate updated " + lightState + lightStateSwitch);
+            lightStateSwitch = lightState;
+        }
+        if(lightState == 2 && !lightState.equals(lightStateSwitch)){
+            // Concentration Light State needs to be set active
+            LightsController.changeLights(52000,240, 240, null);
+            Log.i("Hue", "Lightstate updated " + lightState + lightStateSwitch);
+            lightStateSwitch = lightState;
         }
 
     }

@@ -48,6 +48,8 @@
 
     <string name="btn_show_pick">Show Pick-A-Mood</string>
     <string name="btn_hide_pick">Hide Pick-A-Mood</string>
+    <string name="btn_manual_peak">Add manual GSR peak</string>
+    <string name="txt_press_e4">Press connect to the E4</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
