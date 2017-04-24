@@ -1878,8 +1878,16 @@ containing a value of this type.
         public static final int bridge_ip=0x7f0a0095;
         public static final int bridge_list=0x7f0a0077;
         public static final int bridge_mac=0x7f0a0094;
+        public static final int btn_Bored=0x7f0a006a;
+        public static final int btn_Calm=0x7f0a006c;
+        public static final int btn_Cheerful=0x7f0a0068;
+        public static final int btn_Exited=0x7f0a0069;
+        public static final int btn_Gloomy=0x7f0a006b;
         public static final int btn_HidePick=0x7f0a0073;
+        public static final int btn_Irritated=0x7f0a0067;
+        public static final int btn_Relaxed=0x7f0a006d;
         public static final int btn_ShowPick=0x7f0a0072;
+        public static final int btn_Tense=0x7f0a0066;
         public static final int btn_concentration=0x7f0a0070;
         public static final int btn_cozy=0x7f0a006f;
         public static final int btn_manualpeak=0x7f0a0074;
@@ -1916,14 +1924,6 @@ containing a value of this type.
         public static final int icon_group=0x7f0a008a;
         public static final int ifRoom=0x7f0a001f;
         public static final int image=0x7f0a0029;
-        public static final int imageButton1=0x7f0a006a;
-        public static final int imageButton2=0x7f0a006b;
-        public static final int imageButton3=0x7f0a006c;
-        public static final int imageButton4=0x7f0a006d;
-        public static final int imageButton5=0x7f0a0066;
-        public static final int imageButton6=0x7f0a0067;
-        public static final int imageButton7=0x7f0a0068;
-        public static final int imageButton8=0x7f0a0069;
         public static final int imageView1=0x7f0a0092;
         public static final int info=0x7f0a0086;
         public static final int layout_pickAmood=0x7f0a0065;
@@ -2170,8 +2170,15 @@ containing a value of this type.
         public static final int Animation_AppCompat_DropDownUp=0x7f0700a3;
         /**  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
          */
         public static final int AppBaseTheme=0x7f07000b;
+        /**  All customizations that are NOT specific to a particular API-level can go here. 
+         */
         public static final int AppTheme=0x7f0700a4;
         public static final int Base_AlertDialog_AppCompat=0x7f0700a5;
         public static final int Base_AlertDialog_AppCompat_Light=0x7f0700a6;

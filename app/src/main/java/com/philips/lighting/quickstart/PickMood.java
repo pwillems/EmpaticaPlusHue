@@ -73,7 +73,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
     public ArrayList<Float> edaMeasures = new ArrayList<Float>();
     public Float edaMean = 0.0f;
     public ArrayList<Float> edaTempMeasures = new ArrayList<Float>();
-    public Integer threshold = 3;
+    public Integer threshold = 2;
     public Double standardDev = 0.0;
     public Long startTime = System.currentTimeMillis();
     public Long timer = System.currentTimeMillis();
@@ -180,7 +180,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
 
         // Initiate all the buttons and use them to change the valence rating
         ImageButton tenseButton;
-        tenseButton = (ImageButton) findViewById(R.id.imageButton1);
+        tenseButton = (ImageButton) findViewById(R.id.btn_Tense);
 
         tenseButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -193,7 +193,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
         });
 
         ImageButton irritatedButton;
-        irritatedButton = (ImageButton) findViewById(R.id.imageButton2);
+        irritatedButton = (ImageButton) findViewById(R.id.btn_Irritated);
 
         irritatedButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -206,7 +206,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
         });
 
         ImageButton cheerfulButton;
-        cheerfulButton = (ImageButton) findViewById(R.id.imageButton3);
+        cheerfulButton = (ImageButton) findViewById(R.id.btn_Cheerful);
 
         cheerfulButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -219,7 +219,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
         });
 
         ImageButton exitedButton;
-        exitedButton = (ImageButton) findViewById(R.id.imageButton4);
+        exitedButton = (ImageButton) findViewById(R.id.btn_Exited);
 
         exitedButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -232,7 +232,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
         });
 
         ImageButton boredButton;
-        boredButton = (ImageButton) findViewById(R.id.imageButton5);
+        boredButton = (ImageButton) findViewById(R.id.btn_Bored);
 
         boredButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -245,7 +245,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
         });
 
         ImageButton gloomyButton;
-        gloomyButton = (ImageButton) findViewById(R.id.imageButton6);
+        gloomyButton = (ImageButton) findViewById(R.id.btn_Gloomy);
 
         gloomyButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -258,7 +258,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
         });
 
         ImageButton calmButton;
-        calmButton = (ImageButton) findViewById(R.id.imageButton7);
+        calmButton = (ImageButton) findViewById(R.id.btn_Calm);
 
         calmButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -271,7 +271,7 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
         });
 
         ImageButton relaxedButton;
-        relaxedButton = (ImageButton) findViewById(R.id.imageButton8);
+        relaxedButton = (ImageButton) findViewById(R.id.btn_Relaxed);
 
         relaxedButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -457,7 +457,10 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
         // If the valence is too low, try to improve the mood
         if(valence < valenceThreshold){
             if(currentlyNegative == false) {
-                LightsController.changeLights(29000, 150, 150, null);
+                if(valence < -1.0){
+                    valence = -1.0;
+                }
+                LightsController.changeLights(0, 150, 150, null);
                 Log.w(TAG, "Valence has become to low, changing lights");
                 currentlyNegative = true;
             }
@@ -466,6 +469,9 @@ public class PickMood extends Activity implements EmpaDataDelegate, EmpaStatusDe
             if(currentlyNegative == true){
                 Log.w(TAG, "Valence is normal");
                 lightStateSwitch = 4;
+            }
+            if(valence > 1.0){
+                valence = 1.0;
             }
             currentlyNegative = false;
             // Set the old lightstate back on

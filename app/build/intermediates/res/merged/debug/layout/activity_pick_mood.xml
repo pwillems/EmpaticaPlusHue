@@ -22,32 +22,32 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/imageButton5"
+                android:id="@+id/btn_Tense"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/relaxed" />
+                android:background="@drawable/tense" />
 
             <ImageButton
-                android:id="@+id/imageButton6"
+                android:id="@+id/btn_Irritated"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/calm" />
+                android:background="@drawable/irritated" />
 
             <ImageButton
-                android:id="@+id/imageButton7"
+                android:id="@+id/btn_Cheerful"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/gloomy" />
+                android:background="@drawable/cheerfull" />
 
             <ImageButton
-                android:id="@+id/imageButton8"
+                android:id="@+id/btn_Exited"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/bored" />
+                android:background="@drawable/exited" />
         </LinearLayout>
 
         <LinearLayout
@@ -57,32 +57,32 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/imageButton1"
+                android:id="@+id/btn_Bored"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/tense" />
+                android:background="@drawable/bored" />
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/btn_Gloomy"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/irritated" />
+                android:background="@drawable/gloomy" />
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/btn_Calm"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/cheerfull" />
+                android:background="@drawable/calm" />
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/btn_Relaxed"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/exited" />
+                android:background="@drawable/relaxed" />
 
         </LinearLayout>
     </LinearLayout>
